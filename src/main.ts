@@ -6,6 +6,7 @@ import { makePrecosRouter } from './presentation/routes/precos.routes'; // <-- A
 // ─── Aplicação ────────────────────────────────────────────────────────────────
 
 const app: Application = express();
+app.use(cors());
 
 // ─── Middlewares globais ──────────────────────────────────────────────────────
 
