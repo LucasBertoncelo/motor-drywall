@@ -1,0 +1,16 @@
+datasource db {
+  provider = "postgresql"
+  url      = "DATABASE_URL"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model InsumoPreco {
+  id            String   @id @default(uuid())
+  chaveInsumo   String   @unique
+  nome          String
+  precoUnitario Float
+  atualizadoEm  DateTime @updatedAt
+}
